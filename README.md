@@ -22,7 +22,7 @@
 ## Resources:
 
 - [Chrome Extension documentation](https://developer.chrome.com/extensions/getstarted)
-- [V3 Boilerplate repository](https://developer.chrome.com/extensions/getstarted)
+- [V3 Boilerplate repository](https://github.com/lxieyang/chrome-extension-boilerplate-react)
 - [Webpack documentation](https://webpack.js.org/concepts/)
 
 ---
