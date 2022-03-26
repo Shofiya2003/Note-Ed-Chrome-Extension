@@ -4,6 +4,13 @@
   "description": "A chrome extension to take notes while learning on youtube",
   "options_page": "options.html",
   "background": { "service_worker": "background.bundle.js" },
+  "permissions": [
+    "tabs", "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "*://*/*"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon-34.png"
