@@ -1,16 +1,14 @@
 import React from 'react';
-import logo from '../../assets/img/logo.svg';
 import './Popup.css';
+import Editor from './editor/Editor';
 
 const Popup = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome to Note-Ed
-        </p>
-      </header>
+      <h2>Note-ED Editor</h2>
+      <div className="editor-div">
+        <Editor />
+      </div>
     </div>
   );
 };
