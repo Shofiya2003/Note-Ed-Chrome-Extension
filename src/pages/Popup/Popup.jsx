@@ -25,9 +25,8 @@ function recorder(e){
 
   let something = document.getElementsByClassName("ytp-progress-bar");
   let ts = something
-  console.log(...ts);
   let name = document.getElementsByClassName("ytp-title-link yt-uix-sessionlink ytp-title-fullerscreen-link")
-  console.log(name);
+  console.log(name[0].innerHTML);
 }
 
   return (
