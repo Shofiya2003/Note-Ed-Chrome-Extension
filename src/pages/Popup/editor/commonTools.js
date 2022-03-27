@@ -21,13 +21,13 @@ let tools = {
     // image: Image,
     embed: Embed,
     marker: Marker,
-    warning: Warning,
+    // warning: Warning,
     code: Code,
-    linkTool: LinkTool,
+    // linkTool: LinkTool,
     raw: Raw,
-    quote: Quote,
+    // quote: Quote,
     checklist: CheckList,
-    delimiter: Delimiter,
+    // delimiter: Delimiter,
     inlineCode: InlineCode,
     simpleImage: SimpleImage
 }
