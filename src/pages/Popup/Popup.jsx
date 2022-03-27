@@ -1,7 +1,7 @@
 import React from 'react';
 import './Popup.css';
 import Editor from './editor/Editor';
-import PopupNav from './editor/popupNav/PopupNav';
+import PopupNav from './popupNav/PopupNav';
 
 const Popup = () => {
   return (
