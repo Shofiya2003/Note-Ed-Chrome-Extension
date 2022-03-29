@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import EditorJS from '@editorjs/editorjs';
 import EditorConfigObj from './editorConfig';
 import "./editor.css";
-import Saved from "./Saved";
 
 
 export default function Editor() {
@@ -26,9 +25,9 @@ export default function Editor() {
     })
     return (
         <>
-            {/* Editor Component  */}
+            <h2>Note-ED Editor</h2>
             <div id='editorjs'></div>
-            <button className='save-text-btn' onClick={saveData}>Save Text</button>
+            {/* <button className='save-text-btn' onClick={saveData}>Save Text</button> */}
         </>
 
     )

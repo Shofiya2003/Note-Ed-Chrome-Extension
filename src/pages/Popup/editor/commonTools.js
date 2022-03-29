@@ -27,7 +27,7 @@ let tools = {
     raw: Raw,
     // quote: Quote,
     checklist: CheckList,
-    // delimiter: Delimiter,
+    delimiter: Delimiter,
     inlineCode: InlineCode,
     simpleImage: SimpleImage
 }

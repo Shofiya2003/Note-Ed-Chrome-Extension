@@ -3,6 +3,7 @@
 }
 #editorjs {
   font-size: 1.1rem;
+  padding: 0 5px;
 }
 .save-text-btn {
   position: absolute;

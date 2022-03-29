@@ -1,12 +1,11 @@
 body {
   width: 385px;
   height: 450px;
-  border: 2px solid #f70000;
+  border: 3px solid #3be460;
 }
 
 .App {
   text-align: center;
-  border: 3px solid #3be460;
 }
 
 .editor-div {
