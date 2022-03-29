@@ -1,5 +1,5 @@
 import React from 'react'
-import "./PopupNav.css"
+import "./popupNavStyle.css"
 
 export default function PopupNav() {
     return (
