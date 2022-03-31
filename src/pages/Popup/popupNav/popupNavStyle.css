@@ -5,8 +5,8 @@
 .bottom-nav {
   background-color: rgb(59, 228, 96);
   font-size: 1.2rem;
-  position: fixed;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
+  /* position: fixed; */
+  /* bottom: 0; */
+  /* z-index: 1; */
+  /* width: 100%; */
 }

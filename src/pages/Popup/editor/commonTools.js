@@ -2,12 +2,12 @@ import Header from "@editorjs/header";
 import Table from "@editorjs/table";
 import List from "@editorjs/list";
 import Embed from "@editorjs/embed";
-import Warning from "@editorjs/warning";
-import Code from "@editorjs/code";
-import LinkTool from "@editorjs/link";
+// import Warning from "@editorjs/warning";
+// import Code from "@editorjs/code";
+// import LinkTool from "@editorjs/link";
 // import Image from "@editorjs/image";
 import Raw from "@editorjs/raw";
-import Quote from "@editorjs/quote";
+// import Quote from "@editorjs/quote";
 import Marker from "@editorjs/marker";
 import CheckList from "@editorjs/checklist";
 import Delimiter from "@editorjs/delimiter";
@@ -22,7 +22,7 @@ let tools = {
     embed: Embed,
     marker: Marker,
     // warning: Warning,
-    code: Code,
+    // code: Code,
     // linkTool: LinkTool,
     raw: Raw,
     // quote: Quote,
