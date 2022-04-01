@@ -1,6 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .popup-nav {
   background-color: rgb(59, 228, 96);
   font-size: 1.2rem;
+  height: 7vh;
 }
 .bottom-nav {
   background-color: rgb(59, 228, 96);
@@ -9,4 +15,17 @@
   /* bottom: 0; */
   /* z-index: 1; */
   /* width: 100%; */
+}
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+.nav {
+  position: relative;
+  left: 158px;
+  bottom: 25px;
+  /* display: flex; */
+}
+.nav-icon {
+  width: 27px;
 }

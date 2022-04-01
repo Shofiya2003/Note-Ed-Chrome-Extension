@@ -25,7 +25,7 @@ export default function Editor() {
     })
     return (
         <>
-            <h2>Note-ED Editor</h2>
+            {/* <h2>Note-ED Editor</h2> */}
             <div id='editorjs'></div>
             {/* <button className='save-text-btn' onClick={saveData}>Save Text</button> */}
         </>
