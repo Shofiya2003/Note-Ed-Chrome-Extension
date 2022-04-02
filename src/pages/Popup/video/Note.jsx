@@ -6,8 +6,14 @@ import editIcon from "../../../assets/img/edit-24.png"
 
 export default function Note(props) {
     const { noteInfo } = props;
-    const deleteNote = () => { console.log('deleteing'); }
-    const editNote = () => { console.log('Editing'); }
+    const deleteNote = (e) => {
+        e.preventDefault();
+        console.log('deleting');
+    }
+    const editNote = (e) => {
+        e.preventDefault();
+        console.log('editing');
+    }
     // console.log(Object.Keys(noteInfo)[0]);
     return (
         <div className='note'>
