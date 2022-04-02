@@ -11,10 +11,23 @@ export default function Videohome() {
         { "00:04:08": "notes" }
     ]
 
+    const allNotes2 = {
+        "00:00:23": "notes",
+        "00:01:23": "notes",
+        "00:04:08": "notes"
+    }
+
+    let allNewNotes = Object.keys(allNotes2).map((item, index) => {
+        let tempObj = {}
+        tempObj[item] = allNotes2[item]
+        return tempObj
+    })
+    console.log(allNewNotes, "new arr")
+
     return (
         <div className='video-home'>
             <h2 className='video-title'>{videoTitle}</h2>
-            {allNotes.map((singleNote) => {
+            {allNewNotes.map((singleNote) => {
                 let singleNoteKey = Object.keys(singleNote)[0]
                 return <Note key={singleNoteKey} noteInfo={singleNote} />
             })}
