@@ -27,5 +27,9 @@ h1 {
   /* display: flex; */
 }
 .nav-icon {
-  width: 27px;
+  width: 25px;
+}
+.video-info {
+  padding: 3px;
+  border-bottom: 2px solid #3be460;
 }
