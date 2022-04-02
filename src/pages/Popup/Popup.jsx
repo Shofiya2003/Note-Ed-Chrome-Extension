@@ -1,26 +1,19 @@
 import React, { useState } from 'react';
 
 import './Popup.css';
+import Videohome from "./video/Videohome"
 import Editor from './editor/Editor';
 import PopupNav from './popupNav/PopupNav';
 import Login from './login/Login';
-// import Login from "./login/Login";
-// import Register from "./login/Register";
-// import BottomNav from './popupNav/BottomNav';
 
 const Popup = () => {
     // const history = createMemoryHistory(); // Instead of createBrowserHistory();
-    const [isLoggedin, setisLoggedin] = useState(false);
+    const [isLoggedin, setisLoggedin] = useState(true);
     return (
         <div className="App">
-
             <PopupNav />
-            {isLoggedin ? <Editor /> : <Login setisLoggedin={setisLoggedin} />}
-
-            {/* <Editor /> */}
-
-            {/* <Login /> */}
-
+            {/* {isLoggedin ? <Editor /> : <Login setisLoggedin={setisLoggedin} />} */}
+            <Videohome />
 
         </div>
     );
