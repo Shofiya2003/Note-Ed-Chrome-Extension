@@ -14,10 +14,10 @@ export default function Videohome() {
     const allNotes2 = {
         "00:00:23": "notes",
         "00:01:23": "notes",
-        "00:04:08": "notes"
+        "00:04:08": "notes",
     }
 
-    let allNewNotes = Object.keys(allNotes2).map((item, index) => {
+    let allNewNotes = Object.keys(allNotes2).map((item) => {
         let tempObj = {}
         tempObj[item] = allNotes2[item]
         return tempObj

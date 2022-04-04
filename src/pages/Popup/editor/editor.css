@@ -11,3 +11,15 @@
   left: 39vw;
   margin: 0 auto;
 }
+a.save-btn {
+  position: relative;
+  bottom: 2.5rem;
+  left: 9rem;
+  font-size: 17px;
+  background-color: #6eef8a;
+  color: black;
+  font-weight: 600;
+  padding: 3px 8px;
+  text-decoration: none;
+  border-radius: 3px;
+}

@@ -13,7 +13,8 @@ const Popup = () => {
         <div className="App">
             <PopupNav />
             {/* {isLoggedin ? <Editor /> : <Login setisLoggedin={setisLoggedin} />} */}
-            <Videohome />
+            <Editor />
+            {/* <Videohome /> */}
 
         </div>
     );
