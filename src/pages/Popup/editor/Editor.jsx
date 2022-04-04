@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
 import EditorJS from '@editorjs/editorjs';
-import EditorConfigObj from './editorConfig';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import "./editor.css";
+import EditorConfigObj from './editorConfig';
 
+const API_URL = 'http://localhost:8000'
 
 export default function Editor(props) {
     const { seteditorActive } = props;
@@ -12,11 +14,23 @@ export default function Editor(props) {
     const launchEditor = () => {
         editor = new EditorJS(EditorConfigObj);
     }
-
+// blocks[0] blocks
     const saveData = () => {
         editor.save().then((outputData) => {
             console.log(outputData)
+           // console.log(outputData[blocks]);
             setData(outputData);
+            console.log(outputData.blocks[0].data.text);
+            let note = outputData.blocks[0].data.text;
+            axios.post(`${API_URL}/api/v1/notes/timestamp/create`, { video_url:"String",  video_name:"String",    token:"string",   timestamp:"string",    content: note,    foldername:"string" })
+            .then((response) => {
+              console.log(response);
+            })
+            .catch((err) => {
+             
+              return false;
+            })
+
         }).catch((error) => {
             console.log('Saving failed: ', error)
         });

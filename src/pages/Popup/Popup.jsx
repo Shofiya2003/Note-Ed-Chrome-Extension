@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-
-import './Popup.css';
-import Videohome from "./video/Videohome"
 import Editor from './editor/Editor';
+import './Popup.css';
 import PopupNav from './popupNav/PopupNav';
-import Login from './login/Login';
+import Videohome from "./video/Videohome";
+
 
 const Popup = () => {
+    //
     // const history = createMemoryHistory(); // Instead of createBrowserHistory();
     const [isLoggedin, setisLoggedin] = useState(true);
     const [editorActive, seteditorActive] = useState(false);
