@@ -4,7 +4,8 @@ import EditorConfigObj from './editorConfig';
 import "./editor.css";
 
 
-export default function Editor() {
+export default function Editor(props) {
+    const { seteditorActive } = props;
     const [Data, setData] = useState({});
     let editor;
 
@@ -31,6 +32,7 @@ export default function Editor() {
                     <h2>{"Timestamp : 1:05 "}</h2>
                 </div>
                 <a className='save-btn' href="#" onClick={saveData}>Save</a>
+                <a className='back-btn' href="#" onClick={() => { seteditorActive(false) }}>Back</a>
 
             </div>
 

@@ -14,7 +14,7 @@
 a.save-btn {
   position: relative;
   bottom: 2.5rem;
-  left: 9rem;
+  left: 11rem;
   font-size: 17px;
   background-color: #6eef8a;
   color: black;
@@ -22,4 +22,16 @@ a.save-btn {
   padding: 3px 8px;
   text-decoration: none;
   border-radius: 3px;
+}
+a.back-btn {
+  position: relative;
+  bottom: 2.5rem;
+  right: 11rem;
+  font-size: 17px;
+  color: black;
+  font-weight: 600;
+  padding: 3px 8px;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid black;
 }

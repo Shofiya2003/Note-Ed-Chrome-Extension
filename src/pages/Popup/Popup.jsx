@@ -14,7 +14,7 @@ const Popup = () => {
         <div className="App">
             <PopupNav />
             {/* {isLoggedin ? <Editor /> : <Login setisLoggedin={setisLoggedin} />} */}
-            {editorActive ? <Editor /> : <Videohome seteditorActive={seteditorActive} />}
+            {editorActive ? <Editor seteditorActive={seteditorActive} /> : <Videohome seteditorActive={seteditorActive} />}
             {/* <Editor /> */}
             {/* <Videohome seteditorActive={seteditorActive} /> */}
 
