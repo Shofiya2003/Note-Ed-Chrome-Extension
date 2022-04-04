@@ -3,7 +3,8 @@ import Login from '../login/Login'
 import Note from './Note'
 import Newnote from './Newnote';
 
-export default function Videohome() {
+export default function Videohome(props) {
+    const { seteditorActive } = props;
     const videoTitle = "React server components | Mehul Mohan";
     const allNotes = [
         { "00:00:23": "notes" },
@@ -29,7 +30,7 @@ export default function Videohome() {
             <h2 className='video-title'>{videoTitle}</h2>
             {allNewNotes.map((singleNote) => {
                 let singleNoteKey = Object.keys(singleNote)[0]
-                return <Note key={singleNoteKey} noteInfo={singleNote} />
+                return <Note key={singleNoteKey} noteInfo={singleNote} seteditorActive={seteditorActive} />
             })}
             <Newnote />
         </div>

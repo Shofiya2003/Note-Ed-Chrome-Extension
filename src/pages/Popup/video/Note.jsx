@@ -5,7 +5,7 @@ import editIcon from "../../../assets/img/edit-24.png"
 
 
 export default function Note(props) {
-    const { noteInfo } = props;
+    const { noteInfo, seteditorActive } = props;
     const deleteNote = (e) => {
         e.preventDefault();
         console.log('deleting');
@@ -14,9 +14,13 @@ export default function Note(props) {
         e.preventDefault();
         console.log('editing');
     }
+    const openNote = () => {
+        console.log("opening note...");
+        seteditorActive(true);
+    }
     // console.log(Object.Keys(noteInfo)[0]);
     return (
-        <div className='note'>
+        <div onClick={openNote} className='note'>
             <h2>{Object.keys(noteInfo)[0]}</h2>
             <div className="actions">
                 <a className='action-btn' href="" onClick={editNote} role="button"><img className='action-btn-icon' src={editIcon} alt="Edit icon" title='Edit Notes' /></a>

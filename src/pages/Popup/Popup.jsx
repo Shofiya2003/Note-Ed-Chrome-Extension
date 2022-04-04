@@ -9,12 +9,14 @@ import Login from './login/Login';
 const Popup = () => {
     // const history = createMemoryHistory(); // Instead of createBrowserHistory();
     const [isLoggedin, setisLoggedin] = useState(true);
+    const [editorActive, seteditorActive] = useState(false);
     return (
         <div className="App">
             <PopupNav />
             {/* {isLoggedin ? <Editor /> : <Login setisLoggedin={setisLoggedin} />} */}
-            <Editor />
-            {/* <Videohome /> */}
+            {editorActive ? <Editor /> : <Videohome seteditorActive={seteditorActive} />}
+            {/* <Editor /> */}
+            {/* <Videohome seteditorActive={seteditorActive} /> */}
 
         </div>
     );
