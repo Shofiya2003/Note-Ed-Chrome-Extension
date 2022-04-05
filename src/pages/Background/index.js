@@ -9,3 +9,13 @@ chrome.runtime.onMessageExternal.addListener((request, sender, sendResponse) => 
         sendResponse({ success: false, message: 'Auth info not received!' });
     }
 });
+
+chrome.storage.sync.set({ loggedInStatus: false }, function () {
+});
+
+chrome.storage.sync.get(['loggedInStatus'], function (result) {
+    console.log('loggedInStatus is ' + result.loggedInStatus);
+});
+
+// chrome.storage.sync.set({ loggedInStatus: "true" }, function () {
+// });
