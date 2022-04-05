@@ -18,11 +18,16 @@ export default function Editor(props) {
     const saveData = () => {
         editor.save().then((outputData) => {
             console.log(outputData)
-           // console.log(outputData[blocks]);
+           // console.log(outputData[blocks]); blocks[0].data blocks[0].data.html
             setData(outputData);
+            console.log(outputData.blocks[0].type);
             console.log(outputData.blocks[0].data.text);
             let note = outputData.blocks[0].data.text;
-            axios.post(`${API_URL}/api/v1/notes/timestamp/create`, { video_url:"String",  video_name:"String",    token:"string",   timestamp:"string",    content: note,    foldername:"string" })
+            axios.post(`${API_URL}/api/v1/notes/timestamp/create`, { video_url:"String",  video_name:"String",   timestamp:"string",    content: note,    foldername:"default" },{
+                headers: {
+                    "authorization": ""
+                }
+            })
             .then((response) => {
               console.log(response);
             })
