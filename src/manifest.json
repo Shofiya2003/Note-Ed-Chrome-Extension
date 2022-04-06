@@ -45,7 +45,8 @@
   ],
   "externally_connectable": {
     "matches": [
-      "http://localhost:3001/*"
+      "http://localhost:3001/*",
+      "https://noted-dashboard-auth.netlify.app/*"
     ]
   }
 }
