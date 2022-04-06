@@ -23,7 +23,7 @@ export default function Videohome(props) {
         tempObj[item] = allNotes2[item]
         return tempObj
     })
-    console.log(allNewNotes, "new arr")
+    // console.log(allNewNotes, "new arr")
 
     return (
         <div className='video-home'>
