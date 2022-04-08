@@ -22,20 +22,9 @@ export default function Videohome(props) {
         })
     }
 
-    useEffect(()=>{
-        chrome.storage.sync.get('title',(data)=>{
-            setTitle(data.title);
+    
 
-        });
-        
-    },[])
-
-    useEffect(()=>{
-        chrome.storage.sync.get('title',(data)=>{
-            console.log(data.title+"newS");
-
-        });
-    },[title])
+    
     useEffect(()=>{
         console.log(videoname);
         videoname && fetchNotes();

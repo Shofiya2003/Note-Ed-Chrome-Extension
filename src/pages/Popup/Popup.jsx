@@ -16,6 +16,7 @@ const Popup = () => {
     const [url,setUrl]=useState();
     const [currentTime,setCurrentTime]=useState();
 
+    // Function to get the current time stamp
     const getTimeStamps=async ()=>{
         let [tab]=await chrome.tabs.query({active:true,currentWindow:true});
 
@@ -34,6 +35,7 @@ const Popup = () => {
     })
     }
 
+    //Format title to maintain consistency
     const formatTitle=(videoname)=>{
         if(videoname.charAt(0)==='('){
             let pos=0;
@@ -45,6 +47,8 @@ const Popup = () => {
         }
         setName(videoname);
     }
+
+
     useEffect(async ()=>{
         
         await getTimeStamps();
@@ -57,8 +61,9 @@ const Popup = () => {
     },[]);
 
 
+    //To get updated timestamp and not the previously stored timestamp
     useEffect(()=>{
-        const newTime=chrome.storage.sync.get('timestamp',data=>{
+        chrome.storage.sync.get('timestamp',data=>{
             console.log(data.timestamp+"noe");
             setCurrentTime(data.timestamp);
         });
@@ -69,6 +74,7 @@ const Popup = () => {
         console.log(name);
     },[name])
 
+    //function to store timestamp in chrome storage
     const storeTimestamp=()=>{
         console.log("hereiam");
         const time=document.body.getElementsByClassName('ytp-time-current');
