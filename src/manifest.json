@@ -10,25 +10,31 @@
     "default_popup": "popup.html",
     "default_icon": "icon-34.png"
   },
-
   "permissions": [
     "storage"
   ],
-
   "chrome_url_overrides": {},
   "icons": {
     "128": "icon-128.png"
   },
   "content_scripts": [
     {
-
-      "matches": ["https://www.youtube.com/*"],
-      "js": ["contentScript.bundle.js"],
-      "css": ["content.styles.css"]
-
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "contentScript.bundle.js"
+      ],
+      "css": [
+        "content.styles.css"
+      ]
     }
   ],
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
   "devtools_page": "devtools.html",
   "web_accessible_resources": [
     {
@@ -43,6 +49,7 @@
   "externally_connectable": {
     "matches": [
       "http://localhost:3001/*",
+      "http://localhost:3000/*",
       "https://noted-dashboard-auth.netlify.app/*"
     ]
   }
