@@ -25,6 +25,8 @@ export default function Videohome(props) {
     
 
     
+
+    
     useEffect(()=>{
         console.log(videoname);
         videoname && fetchNotes();
@@ -39,7 +41,7 @@ export default function Videohome(props) {
             <h2 className='video-title'>{videoname}</h2>
             {notes && notes.map((singleNote) => {
                 let singleNoteKey = Object.keys(singleNote)[0]
-                return <Note key={singleNoteKey} noteInfo={singleNote} seteditorActive={seteditorActive} />
+                return <Note key={singleNoteKey}  noteInfo={singleNote} seteditorActive={seteditorActive} />
             })}
             <Newnote seteditorActive={seteditorActive} />
         </div>

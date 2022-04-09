@@ -68,7 +68,9 @@ export default function Editor(props) {
 
             </div>
 
-            <div id='editorjs'></div>
+            <div id='editorjs'>
+                <p>{props.prevNote}</p>
+            </div>
 
         </>
 
