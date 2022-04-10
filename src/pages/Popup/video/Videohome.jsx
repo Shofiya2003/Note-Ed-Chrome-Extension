@@ -29,12 +29,6 @@ export default function Videohome(props) {
         videoname && fetchNotes();
     },[videoname])
     
-    
-    
-
-   
-    // console.log(allNewNotes, "new arr")
-
     return (
         <div className='video-home'>
             <h2 className='video-title'>{videoname}</h2>

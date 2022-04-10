@@ -1,19 +1,30 @@
-import React, { useEffect, useState } from 'react'
 import EditorJS from '@editorjs/editorjs';
-import EditorConfigObj from './editorConfig';
-import "./editor.css";
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import "./editor.css";
+
+import EditorConfigObj from './editorConfig';
 
 const API_URL = 'http://localhost:8000'
+
 export default function Editor(props) {
-    const { seteditorActive,videoname,url,timestamp} = props;
+    const { seteditorActive,videoname,url,timestamp } = props;
+
     const [Data, setData] = useState({});
+   
     let editor;
 
     const launchEditor = () => {
         editor = new EditorJS(EditorConfigObj);
     }
 
+    
+
+        
+
+
+    
+// blocks[0] blocks
     const saveData = () => {
         
         editor.save().then((outputData) => {
@@ -43,6 +54,10 @@ export default function Editor(props) {
     useEffect(() => {
         launchEditor()
     })
+
+    
+
+    
     return (
         <>
             <div className="video-nav">
