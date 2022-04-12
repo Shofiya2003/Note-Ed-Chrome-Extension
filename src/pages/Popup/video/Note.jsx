@@ -5,7 +5,7 @@ import editIcon from "../../../assets/img/edit-24.png"
 
 
 export default function Note(props) {
-    const { noteInfo, seteditorActive } = props;
+    const { noteInfo, setActiveNote, seteditorActive } = props;
     const deleteNote = (e) => {
         e.preventDefault();
         console.log('deleting');
@@ -16,7 +16,9 @@ export default function Note(props) {
     }
     const openNote = () => {
         console.log("opening note...");
+        setActiveNote(noteInfo);
         seteditorActive(true);
+
     }
     // console.log(Object.Keys(noteInfo)[0]);
     return (

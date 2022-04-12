@@ -4,6 +4,7 @@ import Editor from './editor/Editor';
 
 export default function HomeFrame(props) {
     const { seteditorActive, editorActive } = props;
+    const [activeNote, setActiveNote] = useState();
 
     const [name, setName] = useState();
     const [url, setUrl] = useState();
@@ -70,7 +71,7 @@ export default function HomeFrame(props) {
     return (
         <>
             {/* {console.log("rendering homeframe")} */}
-            {editorActive ? <Editor seteditorActive={seteditorActive} videoname={name} timestamp={currentTime} url={url} /> : <Videohome videoname={name} url={url} seteditorActive={seteditorActive} />}
+            {editorActive ? <Editor activeNote={activeNote} seteditorActive={seteditorActive} videoname={name} timestamp={currentTime} url={url} /> : <Videohome setActiveNote={setActiveNote} videoname={name} url={url} seteditorActive={seteditorActive} />}
         </>
     )
 }

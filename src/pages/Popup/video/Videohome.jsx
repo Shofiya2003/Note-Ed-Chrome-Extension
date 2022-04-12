@@ -11,7 +11,7 @@ const ramsToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhbSIs
 
 
 export default function Videohome(props) {
-    const { videoname, tmp, url, seteditorActive } = props;
+    const { setActiveNote, videoname, url, seteditorActive } = props;
     const [allNotes, setAllNotes] = useState();
     let [title, setTitle] = useState();
 
@@ -33,7 +33,7 @@ export default function Videohome(props) {
     //     console.log(videoname);
     //     videoname && fetchNotes(); 
     // }, [videoname])
-    console.log(url, "in useEffect");
+
     useEffect(() => {
         url && fetchNotes(url);
     }, [url])
@@ -42,7 +42,7 @@ export default function Videohome(props) {
             <h2 className='video-title'>{videoname}</h2>
             {allNotes && allNotes.map((singleNote) => {
                 let singleNoteKey = Object.keys(singleNote)[0]
-                return <Note key={singleNoteKey} noteInfo={singleNote} seteditorActive={seteditorActive} />
+                return <Note setActiveNote={setActiveNote} key={singleNoteKey} noteInfo={singleNote} seteditorActive={seteditorActive} />
             })}
             <Newnote seteditorActive={seteditorActive} />
         </div>

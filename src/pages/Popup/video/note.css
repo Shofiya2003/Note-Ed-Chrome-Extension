@@ -1,18 +1,23 @@
 :root {
   --primary-color: #8d87f6;
+  --primary-light: #a9a5f6;
 }
 
 .note {
   width: 85%;
   border: 2px solid var(--primary-color);
-  padding: 0.75rem;
-  margin: 1rem auto;
-  background-color: var(--primary-color);
+  padding: 0.75em;
+  margin: 0.7rem auto;
+  background-color: var(--primary-light);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-around;
   border-radius: 6px;
+  transition: 0.2s;
+}
+.note:hover {
+  background-color: #8d87f6;
 }
 .video-title {
   padding: 0.5rem;

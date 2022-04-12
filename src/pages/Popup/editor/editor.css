@@ -12,36 +12,40 @@
   margin: 0 auto; */
 }
 a.save-btn {
-  /* position: relative;
-  bottom: 2.5rem;
-  left: 11rem;*/
   font-size: 17px;
-  background-color: #6eef8a;
+  background-color: #e5e3ff;
   color: black;
   font-weight: 600;
   padding: 3px 8px;
   text-decoration: none;
   border-radius: 3px;
   border: 1px solid black;
+  transition: 0.3s;
 }
 a.back-btn {
-  /* position: relative;
-  bottom: 2.5rem;
-  right: 11rem;*/
   font-size: 17px;
   color: black;
   font-weight: 600;
+  background-color: #e5e3ff;
   padding: 3px 8px;
   text-decoration: none;
   border-radius: 3px;
   border: 1px solid black;
+  margin-right: 8px;
+  transition: 0.3s;
 }
 .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px;
+  padding: 7px;
   margin-bottom: 7px;
   gap: 1rem;
   background-color: #afaaf7;
+}
+.back-btn:hover {
+  background-color: #8d87f6;
+}
+.save-btn:hover {
+  background-color: #8d87f6;
 }
