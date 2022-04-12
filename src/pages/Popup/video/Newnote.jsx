@@ -2,9 +2,10 @@ import React from 'react'
 import "./note.css"
 
 export default function Newnote(props) {
-    const { seteditorActive } = props;
+    const { setActiveNote, seteditorActive } = props;
     const createNote = () => {
         console.log("creating new note...");
+        setActiveNote(null);
         seteditorActive(true);
     }
     return (

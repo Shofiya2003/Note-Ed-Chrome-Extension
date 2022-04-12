@@ -13,7 +13,6 @@ export default function Editor(props) {
     const { seteditorActive, activeNote, videoname, url, timestamp } = props;
     // const [Data, setData] = useState({});
     let editor;
-    console.log(JSON.parse(activeNote[Object.keys(activeNote)[0]]), "activeNote");
     const launchEditor = () => {
         editor = new EditorJS({
             holder: 'editorjs',
@@ -21,7 +20,7 @@ export default function Editor(props) {
             placeholder: "write your notes here...",
             readOnly: false,
             tools: tools,
-            data: JSON.parse(activeNote[Object.keys(activeNote)[0]])
+            data: activeNote ? JSON.parse(activeNote[Object.keys(activeNote)[0]]) : null
         });
     }
     // blocks[0] blocks

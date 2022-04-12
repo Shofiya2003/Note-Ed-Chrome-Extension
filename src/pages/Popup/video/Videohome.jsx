@@ -44,7 +44,7 @@ export default function Videohome(props) {
                 let singleNoteKey = Object.keys(singleNote)[0]
                 return <Note setActiveNote={setActiveNote} key={singleNoteKey} noteInfo={singleNote} seteditorActive={seteditorActive} />
             })}
-            <Newnote seteditorActive={seteditorActive} />
+            <Newnote setActiveNote={setActiveNote} seteditorActive={seteditorActive} />
         </div>
     )
 }
