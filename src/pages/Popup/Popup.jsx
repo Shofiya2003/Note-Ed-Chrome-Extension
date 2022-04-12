@@ -9,7 +9,6 @@ const Popup = () => {
     const [editorActive, seteditorActive] = useState(false);
 
     chrome.storage.sync.get(['loggedInStatus'], function (result) {
-        console.log('loggedInStatus is ' + result.loggedInStatus);
         if (result.loggedInStatus) {
             setisLoggedin(true);
         }

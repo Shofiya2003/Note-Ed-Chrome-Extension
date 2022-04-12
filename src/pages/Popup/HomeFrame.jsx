@@ -40,6 +40,7 @@ export default function HomeFrame(props) {
         }
         setName(videoname);
     }
+
     useEffect(() => {
         getTimeStamps();
         chrome.storage.sync.get('timestamp', (data) => {
@@ -50,10 +51,9 @@ export default function HomeFrame(props) {
 
     useEffect(() => {
         const newTime = chrome.storage.sync.get('timestamp', data => {
-            console.log(data.timestamp + "noe");
+            console.log(data.timestamp + "timestamp");
             setCurrentTime(data.timestamp);
         });
-
     }, [time])
 
     useEffect(() => {
@@ -61,13 +61,11 @@ export default function HomeFrame(props) {
     }, [name])
 
     const storeTimestamp = () => {
-        console.log("hereiam");
+        console.log("storetimestamp called");
         const time = document.body.getElementsByClassName('ytp-time-current');
         const timestamp = time[0].innerText;
 
         chrome.storage.sync.set({ timestamp });
-
-
     }
 
     return (
