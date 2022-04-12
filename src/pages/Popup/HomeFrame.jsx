@@ -12,8 +12,6 @@ export default function HomeFrame(props) {
 
     const getTimeStamps = async () => {
         let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-
         formatTitle(tab.title);
 
         setUrl(tab.url);
@@ -35,7 +33,6 @@ export default function HomeFrame(props) {
                 pos++;
             }
             videoname = videoname.substring(pos + 1);
-
         }
         if (videoname.charAt(0) === " ") {
             console.log("space contains");
@@ -43,15 +40,11 @@ export default function HomeFrame(props) {
         }
         setName(videoname);
     }
-    useEffect(async () => {
-
-        await getTimeStamps();
-
+    useEffect(() => {
+        getTimeStamps();
         chrome.storage.sync.get('timestamp', (data) => {
             console.log(data);
         })
-
-
     }, []);
 
 

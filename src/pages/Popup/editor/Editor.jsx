@@ -19,7 +19,7 @@ export default function Editor(props) {
     const saveData = () => {
         editor.save().then((outputData) => {
             console.log(outputData)
-            setData(outputData);
+            // setData(outputData);
             let note = JSON.stringify(outputData);
             axios.post(`${API_URL}/api/v1/notes/timestamp/create`, { video_url: url, videoname, timestamp, content: note, foldername: "default" }, {
                 headers: {
