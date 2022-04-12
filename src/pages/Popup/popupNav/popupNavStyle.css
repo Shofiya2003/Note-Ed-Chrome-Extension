@@ -44,7 +44,7 @@ h1 {
   padding: 5px;
 }
 .video-info {
-  padding: 3px;
+  padding: 3px 8px;
   border-bottom: 2px solid var(--primary-color);
   background-color: #e3e1ff;
 }
