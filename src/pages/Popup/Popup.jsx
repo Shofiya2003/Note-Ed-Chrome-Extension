@@ -3,6 +3,7 @@ import './Popup.css';
 import PopupNav from './popupNav/PopupNav';
 import Login from './login/Login';
 import HomeFrame from './HomeFrame';
+import OfflinePage from './OfflinePage';
 
 const Popup = () => {
     const [isLoggedin, setisLoggedin] = useState(false);
@@ -16,12 +17,10 @@ const Popup = () => {
 
     return (
         <div className="App">
-            <PopupNav />
-            {isLoggedin ? <HomeFrame seteditorActive={seteditorActive} editorActive={editorActive} /> : <Login setisLoggedin={setisLoggedin} />}
-
-            {/* <Editor /> */}
-            {/* <Videohome seteditorActive={seteditorActive} /> */}
-
+            {navigator.onLine ? <>
+                <PopupNav />
+                {isLoggedin ? <HomeFrame seteditorActive={seteditorActive} editorActive={editorActive} /> : <Login setisLoggedin={setisLoggedin} />}
+            </> : <OfflinePage />}
         </div>
     );
 };
