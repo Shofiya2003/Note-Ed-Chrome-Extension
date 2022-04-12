@@ -44,20 +44,20 @@ export default function Editor(props) {
     useEffect(() => {
         launchEditor()
     })
+
     return (
         <>
             <div className="video-nav">
                 <div className="video-info">
                     <h2>{videoname}</h2>
+                </div>
+                <div className="buttons">
+                    <a className='back-btn' href="#" onClick={() => { seteditorActive(false) }}>Back</a>
+                    <a className='save-btn' href="#" onClick={saveData}>Save</a>
                     <h2>{`Timestamp : ${timestamp} `}</h2>
                 </div>
-                <a className='save-btn' href="#" onClick={saveData}>Save</a>
-                <a className='back-btn' href="#" onClick={() => { seteditorActive(false) }}>Back</a>
-
             </div>
-
             <div id='editorjs'></div>
-
         </>
 
     )

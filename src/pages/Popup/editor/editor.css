@@ -6,15 +6,15 @@
   padding: 0 5px;
 }
 .save-text-btn {
-  position: absolute;
+  /* position: absolute;
   bottom: 0.5rem;
   left: 39vw;
-  margin: 0 auto;
+  margin: 0 auto; */
 }
 a.save-btn {
-  position: relative;
+  /* position: relative;
   bottom: 2.5rem;
-  left: 11rem;
+  left: 11rem;*/
   font-size: 17px;
   background-color: #6eef8a;
   color: black;
@@ -22,11 +22,12 @@ a.save-btn {
   padding: 3px 8px;
   text-decoration: none;
   border-radius: 3px;
+  border: 1px solid black;
 }
 a.back-btn {
-  position: relative;
+  /* position: relative;
   bottom: 2.5rem;
-  right: 11rem;
+  right: 11rem;*/
   font-size: 17px;
   color: black;
   font-weight: 600;
@@ -34,4 +35,13 @@ a.back-btn {
   text-decoration: none;
   border-radius: 3px;
   border: 1px solid black;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  margin-bottom: 7px;
+  gap: 1rem;
+  background-color: #afaaf7;
 }
