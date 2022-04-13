@@ -1,0 +1,21 @@
+.goto-yt {
+  text-align: center;
+}
+.hero-name {
+  font-family: cursive;
+  background-color: #8a84fa;
+  padding: 2px;
+}
+.info {
+  margin: 4rem 1rem;
+}
+.go-yt-btn {
+  background-color: #f45454;
+  color: white;
+  padding: 7px;
+  font-size: 1rem;
+  margin: 1.5rem auto;
+  display: inline-block;
+  border-radius: 4px;
+  text-decoration: none;
+}

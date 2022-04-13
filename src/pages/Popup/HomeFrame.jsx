@@ -36,17 +36,19 @@ export default function HomeFrame(props) {
 
     const getTimeStamps = async () => {
         let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-        formatTitle(tab.title);
-        setUrl(tab.url);
+        if (tab.favIconUrl === "https://www.youtube.com/s/desktop/dd6131a8/img/favicon_32x32.png") {
+            formatTitle(tab.title);
+            setUrl(tab.url);
 
-        chrome.scripting.executeScript({
-            target: { tabId: tab.id },
-            function: storeTimestamp
-        });
-        chrome.storage.sync.get('timestamp', (data) => {
-            console.log(data, "stored timestamp");
-            setTime(data.timestamp);
-        })
+            chrome.scripting.executeScript({
+                target: { tabId: tab.id },
+                function: storeTimestamp
+            });
+            chrome.storage.sync.get('timestamp', (data) => {
+                console.log(data, "stored timestamp");
+                setTime(data.timestamp);
+            })
+        }
     }
 
 

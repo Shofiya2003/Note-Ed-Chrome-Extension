@@ -58,7 +58,7 @@ export default function Note(props) {
         <div className='note'>
             <h2 className='timestamp' title='Open Note' onClick={openNote}>{Object.keys(noteInfo)[0]}</h2>
             <div className="actions">
-                <a className='action-btn' href="" onClick={editNote} role="button"><img className='action-btn-icon' src={editIcon} alt="Edit icon" title='Edit Notes' /></a>
+                {/* <a className='action-btn' href="" onClick={editNote} role="button"><img className='action-btn-icon' src={editIcon} alt="Edit icon" title='Edit Notes' /></a> */}
                 <a className='action-btn' href="" onClick={deleteNote} role="button"><img className='action-btn-icon' src={deleteIcon} alt="delete icon" title='Delete Note' /></a>
             </div>
         </div>
