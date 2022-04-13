@@ -60,7 +60,7 @@ export default function YTHome() {
     return (
         <div>
 
-            {editorActive ? <Editor activeNote={activeNote} setActiveNote={setActiveNote} seteditorActive={seteditorActive} /> : mainYTHomeFrame()}
+            {editorActive ? <Editor activeNote={activeNote} url={activeVideo.video_url} videoname={activeVideo.video_name} seteditorActive={seteditorActive} /> : mainYTHomeFrame()}
             {/* {editorActive ? <Editor activeNote={activeNote} seteditorActive={seteditorActive} videoname={activeVideo.video_name} currentTime={"time"} url={"a"} /> : <VideoNotes setActiveNote={setActiveNote} videoname={"activeVideo.video_name"} url={"activeVideo.video_url"} seteditorActive={seteditorActive} />} */}
         </div>
     )
