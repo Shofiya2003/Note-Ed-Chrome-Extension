@@ -15,17 +15,24 @@ export default function Videohome(props) {
     const [allNotes, setAllNotes] = useState();
     let [title, setTitle] = useState();
 
-    const fetchNotes = (url) => {
-        console.log(url, "received in fetchNotes");
-        const video_id = url.split("watch?v=")[1]
+    const fetchNotes = async (video_id) => {
+        // console.log(url, "received in fetchNotes");
+        // const video_id = url.split("watch?v=")[1]
         axios.get(`${host}/api/v1/video/${video_id}`, {
             headers: {
                 "authorization": `Bearer ${ramsToken}`
             }
         }).then(data => {
-            console.log(data.data.data);
-            setAllNotes(data.data.data);
+            console.log(data.data.message);
+            if (data.data.message === "not found") {
+                setAllNotes([])
+            } else {
+                setAllNotes(data.data.data);
+            }
+        }).catch(err => {
+            console.log(err);
         })
+
     }
 
     // API deprecated ❤
@@ -35,7 +42,13 @@ export default function Videohome(props) {
     // }, [videoname])
 
     useEffect(() => {
-        url && fetchNotes(url);
+        if (url) {
+            let video_id = url.split("watch?v=")[1]
+            if (video_id.includes("&t=")) {
+                video_id = video_id.split("&t=")[0]
+            }
+            fetchNotes(video_id);
+        }
     }, [url])
     return (
         <div className='video-home'>
