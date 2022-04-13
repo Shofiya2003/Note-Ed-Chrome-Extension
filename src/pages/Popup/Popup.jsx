@@ -31,19 +31,19 @@ const Popup = () => {
         fun()
     }, [])
 
-    // const MainPopup = () => {
-    //     return <>
-    //         {isYtTab ? <>
-    //             <PopupNav />
-    //             {isLoggedin ? <HomeFrame seteditorActive={seteditorActive} editorActive={editorActive} /> : <Login setisLoggedin={setisLoggedin} />}
-    //         </> : <GotoYoutube />}
-    //     </>
-    // }
+    const MainPopup = () => {
+        return <>
+            {isYtTab ? <>
+                <PopupNav />
+                {isLoggedin ? <HomeFrame seteditorActive={seteditorActive} editorActive={editorActive} /> : <Login setisLoggedin={setisLoggedin} />}
+            </> : <GotoYoutube />}
+        </>
+    }
     return (
         <div className="App">
-            {/* {navigator.onLine ? MainPopup() : <OfflinePage />} */}
-            <PopupNav />
-            {isLoggedin ? <HomeFrame seteditorActive={seteditorActive} editorActive={editorActive} /> : <Login setisLoggedin={setisLoggedin} />}
+            {navigator.onLine ? MainPopup() : <OfflinePage />}
+            {/* <PopupNav />
+            {isLoggedin ? <HomeFrame seteditorActive={seteditorActive} editorActive={editorActive} /> : <Login setisLoggedin={setisLoggedin} />} */}
         </div>
     );
 };
