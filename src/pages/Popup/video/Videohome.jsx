@@ -47,6 +47,7 @@ export default function Videohome(props) {
             if (video_id.includes("&t=")) {
                 video_id = video_id.split("&t=")[0]
             }
+            console.log("Formated video id", video_id);
             fetchNotes(video_id);
         }
     }, [url])

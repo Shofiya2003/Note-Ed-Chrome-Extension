@@ -15,7 +15,10 @@ export default function Note(props) {
     const deleteNote = (e) => {
         e.preventDefault();
         console.log('deleting');
-        const video_id = url.split("watch?v=")[1]
+        let video_id = url.split("watch?v=")[1]
+        if (video_id.includes("&t=")) {
+            video_id = video_id.split("&t=")[0]
+        }
 
         axios.post(`${API_URL}/api/v1/notes/timestamp/delete`, { timestamp: Object.keys(noteInfo)[0], video_id }, {
             headers: {
