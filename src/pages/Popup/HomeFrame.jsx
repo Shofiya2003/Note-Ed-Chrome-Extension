@@ -39,7 +39,7 @@ export default function HomeFrame(props) {
 
     const getTimeStamps = async () => {
         let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-        if (tab.favIconUrl === "https://www.youtube.com/s/desktop/dd6131a8/img/favicon_32x32.png") {
+        if (tab.url.includes("https://www.youtube.com/watch?")) {
             formatTitle(tab.title);
             setUrl(tab.url);
 
