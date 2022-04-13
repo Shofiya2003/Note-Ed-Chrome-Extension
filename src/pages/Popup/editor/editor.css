@@ -43,3 +43,11 @@ a.back-btn {
 .save-btn:hover {
   background-color: #8d87f6;
 }
+
+/* inline tools fix  */
+button.ce-inline-tool.ce-inline-tool--last.ce-inline-tool--active,
+button.ce-inline-tool,
+button.ce-inline-tool.ce-inline-tool--bold,
+button.ce-inline-tool.ce-inline-tool--italic {
+  margin: 0;
+}
