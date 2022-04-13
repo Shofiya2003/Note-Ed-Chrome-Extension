@@ -71,7 +71,7 @@ export default function HomeFrame(props) {
     return (
         <>
             {/* {console.log("rendering homeframe")} */}
-            {editorActive ? <Editor activeNote={activeNote} seteditorActive={seteditorActive} videoname={name} timestamp={currentTime} url={url} /> : <Videohome setActiveNote={setActiveNote} videoname={name} url={url} seteditorActive={seteditorActive} />}
+            {editorActive ? <Editor activeNote={activeNote} seteditorActive={seteditorActive} videoname={name} currentTime={currentTime} url={url} /> : <Videohome setActiveNote={setActiveNote} videoname={name} url={url} seteditorActive={seteditorActive} />}
         </>
     )
 }
