@@ -7,10 +7,10 @@ import settingIcon from "../../../assets/img/settings-32.svg"
 export default function PopupNav() {
     return (
         <div className='popup-nav'>
-            <div className="hero">Sasta Notion</div>
+            <div className="hero" title='Sasta Notion'>Sasta Notion</div>
             <div className="nav">
                 <a className='nav-icon' href="#gf" rel="noreferrer"><img src={deleteIcon} className="action-btn-icon" alt="clear notes icon" title='Clear Notes' /></a>
-                <a className='nav-icon' href="#gf"><img src={settingIcon} className="action-btn-icon" alt="settings" title='settings' /></a>
+                <a className='nav-icon' href="chrome-extension://fkldjphfipjbgmadnppjeebikbhoaelm/options.html"><img src={settingIcon} className="action-btn-icon" alt="settings" title='settings' /></a>
                 <a className='nav-icon' href="https://linktr.ee/prathameshdukare" target="_blank" rel="noreferrer"><img src={redirectIcon} className="action-btn-icon" alt="redirect icon" title='Go to Dashboard' /></a>
             </div>
 
