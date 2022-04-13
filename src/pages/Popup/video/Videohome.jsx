@@ -42,7 +42,7 @@ export default function Videohome(props) {
             <h2 className='video-title'>{videoname}</h2>
             {allNotes && allNotes.map((singleNote) => {
                 let singleNoteKey = Object.keys(singleNote)[0]
-                return <Note setActiveNote={setActiveNote} key={singleNoteKey} noteInfo={singleNote} seteditorActive={seteditorActive} />
+                return <Note setActiveNote={setActiveNote} key={singleNoteKey} noteInfo={singleNote} url={url} setAllNotes={setAllNotes} allNotes={allNotes} seteditorActive={seteditorActive} />
             })}
             <Newnote setActiveNote={setActiveNote} seteditorActive={seteditorActive} />
         </div>
