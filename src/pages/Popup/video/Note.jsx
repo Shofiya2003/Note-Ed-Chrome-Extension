@@ -11,6 +11,7 @@ const ramsToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhbSIs
 
 export default function Note(props) {
     const { noteInfo, url, allNotes, setAllNotes, setActiveNote, seteditorActive } = props;
+    console.log(noteInfo, "noteInfo");
     const deleteNote = (e) => {
         e.preventDefault();
         console.log('deleting');

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Videohome from "./video/Videohome"
 import Editor from './editor/Editor';
+import YTHome from './yt-home/YTHome';
 
 export default function HomeFrame(props) {
     const { seteditorActive, editorActive } = props;
     const [activeNote, setActiveNote] = useState();
+    const [isYtHome, setisYtHome] = useState(null);
+
 
     const [name, setName] = useState();
     const [url, setUrl] = useState();
@@ -51,12 +54,27 @@ export default function HomeFrame(props) {
         }
     }
 
+    const mainFrame = () => {
+        return <>
+            {editorActive ? <Editor activeNote={activeNote} seteditorActive={seteditorActive} videoname={name} currentTime={currentTime} url={url} /> : <Videohome setActiveNote={setActiveNote} videoname={name} url={url} seteditorActive={seteditorActive} />}
+        </>
+    }
 
     useEffect(() => {
-        getTimeStamps();
-        chrome.storage.sync.get('timestamp', (data) => {
-            console.log(data);
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            if (tabs[0].url === "https://www.youtube.com/") {
+                setisYtHome(true);
+                // dont-fetch
+            } else if (!(tabs[0].url === "https://www.youtube.com/")) {
+                setisYtHome(false);
+                // now fetch 
+                getTimeStamps();
+                chrome.storage.sync.get('timestamp', (data) => {
+                    console.log(data);
+                })
+            }
         })
+
     }, []);
 
     useEffect(() => {
@@ -72,8 +90,7 @@ export default function HomeFrame(props) {
 
     return (
         <>
-            {/* {console.log("rendering homeframe")} */}
-            {editorActive ? <Editor activeNote={activeNote} seteditorActive={seteditorActive} videoname={name} currentTime={currentTime} url={url} /> : <Videohome setActiveNote={setActiveNote} videoname={name} url={url} seteditorActive={seteditorActive} />}
+            {isYtHome ? <YTHome /> : mainFrame()}
         </>
     )
 }

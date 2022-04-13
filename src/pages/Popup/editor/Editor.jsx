@@ -10,6 +10,8 @@ const ramsToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhbSIs
 
 export default function Editor(props) {
     const { seteditorActive, activeNote, videoname, url, currentTime } = props;
+
+    console.log(props, "props in editor")
     console.log(currentTime, "timestamp in editpr")
     let editor;
     const launchEditor = () => {

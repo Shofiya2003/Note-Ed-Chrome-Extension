@@ -1,0 +1,21 @@
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #bcbae4;
+}
+.yt-logo {
+  width: 50px;
+}
+
+.single-video {
+  cursor: pointer;
+  background-color: #b1adf7;
+  border: 2px solid #9b96f4;
+  padding: 1em;
+  margin: 10px;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+}
