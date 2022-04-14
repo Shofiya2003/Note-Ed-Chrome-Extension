@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Note from './Note'
 import Newnote from './Newnote';
 import axios from 'axios';
+import LoadingSpinner from '../LoadingSpinner';
 
 // globle variables 
 const host = "https://Backend-1.prathameshdukare.repl.co"
@@ -12,12 +13,11 @@ const ramsToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhbSIs
 
 export default function Videohome(props) {
     const { setActiveNote, videoname, url, seteditorActive } = props;
-    const [allNotes, setAllNotes] = useState();
+    const [allNotes, setAllNotes] = useState(null);
     let [title, setTitle] = useState();
 
+    console.log(setAllNotes, "setAllNotes in videojmo");
     const fetchNotes = async (video_id) => {
-        // console.log(url, "received in fetchNotes");
-        // const video_id = url.split("watch?v=")[1]
         axios.get(`${host}/api/v1/video/${video_id}`, {
             headers: {
                 "authorization": `Bearer ${ramsToken}`
@@ -54,10 +54,10 @@ export default function Videohome(props) {
     return (
         <div className='video-home'>
             <h2 className='video-title'>{videoname}</h2>
-            {allNotes && allNotes.map((singleNote) => {
+            {allNotes ? allNotes.map((singleNote) => {
                 let singleNoteKey = Object.keys(singleNote)[0]
                 return <Note setActiveNote={setActiveNote} key={singleNoteKey} noteInfo={singleNote} url={url} setAllNotes={setAllNotes} allNotes={allNotes} seteditorActive={seteditorActive} />
-            })}
+            }) : <LoadingSpinner />}
             <Newnote setActiveNote={setActiveNote} seteditorActive={seteditorActive} />
         </div>
     )

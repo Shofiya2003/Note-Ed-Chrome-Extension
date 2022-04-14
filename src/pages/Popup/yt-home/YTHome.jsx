@@ -5,6 +5,7 @@ import "./yt-home.css"
 import SingleVideo from './SingleVideo';
 import VideoNotes from './VideoNotes';
 import Editor from '../editor/Editor';
+import LoadingSpinner from '../LoadingSpinner';
 
 const host = "https://Backend-1.prathameshdukare.repl.co"
 const siyasToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNpeWEiLCJlbWFpbCI6InNpeWFAZ21haWwuY29tIiwidXNlcl9pZCI6IjYyMzczMDhkZTlmZTZiNmJhYjYxOTU1NiIsImlhdCI6MTY0ODgyNTIyNX0.Eylls1_gGvXmuU8IrI_nTr7VZZWb2Qp4TarfCcF4ulY"
@@ -17,13 +18,6 @@ export default function YTHome() {
     const [activeVideo, setactiveVideo] = useState(null);
     const [editorActive, seteditorActive] = useState(false);
     const [activeNote, setActiveNote] = useState(null);
-
-    const loading = () => {
-        return <div className="loading">
-            loading...
-        </div>
-    }
-
 
     useEffect(() => {
         axios.get(`${host}/api/v1/videos`, {
@@ -48,7 +42,7 @@ export default function YTHome() {
             <div className="video-list">
                 {allMyVideos ? allMyVideos.map((video, index) => {
                     return <SingleVideo key={video.video_id} videoInfo={video} setisVideoNotesOpen={setisVideoNotesOpen} setactiveVideo={setactiveVideo} />
-                }) : loading()}
+                }) : <LoadingSpinner />}
             </div>
         </>
     }
