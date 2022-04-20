@@ -5,12 +5,7 @@ import './editor.css';
 import tools from './commonTools';
 
 const API_URL = 'http://localhost:8000';
-const siyasToken =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNpeWEiLCJlbWFpbCI6InNpeWFAZ21haWwuY29tIiwidXNlcl9pZCI6IjYyMzczMDhkZTlmZTZiNmJhYjYxOTU1NiIsImlhdCI6MTY0ODgyNTIyNX0.Eylls1_gGvXmuU8IrI_nTr7VZZWb2Qp4TarfCcF4ulY';
-const ramsToken =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhbSIsImVtYWlsIjoicmFtQGdtYWlsLmNvbSIsInVzZXJfaWQiOiI2MjU1M2U0MzgzMWEyYjE4N2IyZWEyZDciLCJpYXQiOjE2NDk3NTM2Njd9.jcOqw_X7Ve7KyL3SZcfVWQN4xDfYeOFE4KSbep1P3f0';
-const token =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imhlcm1vaW5lIiwiZW1haWwiOiJoZXJtb2luZUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiNjI1OGMxMzQ4OWE2NzQyZTRjMTg5MzU4IiwiaWF0IjoxNjQ5OTg0MDI1fQ.hfBr644aHKXGAI2HDdgE7wUXwFX0hN8VbIiwM-UT2tc';
+
 export default function Editor(props) {
   const { seteditorActive, activeNote, videoname, url, currentTime } = props;
 
