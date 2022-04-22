@@ -25,3 +25,22 @@
   font-size: 1rem;
   font-weight: 600;
 }
+
+a.delete-btn {
+  font-size: 17px;
+  color: black;
+  font-weight: 600;
+  background-color: var(--primary-very-light);
+  padding: 3px 8px;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+a.delete-btn:hover {
+  background-color: #fbc8c8;
+}
+.buttons {
+  justify-content: flex-start;
+}

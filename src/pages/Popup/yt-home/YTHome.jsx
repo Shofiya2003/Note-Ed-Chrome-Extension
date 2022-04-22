@@ -73,6 +73,7 @@ export default function YTHome() {
             activeVideo={activeVideo}
             setActiveNote={setActiveNote}
             seteditorActive={seteditorActive}
+            setisVideoNotesOpen={setisVideoNotesOpen}
           />
         ) : (
           whenVideoListOpen()

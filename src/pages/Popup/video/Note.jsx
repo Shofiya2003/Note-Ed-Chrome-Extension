@@ -16,6 +16,7 @@ export default function Note(props) {
     seteditorActive,
   } = props;
   console.log(noteInfo, 'noteInfo');
+  
   const deleteNote = async (e) => {
     const { authToken } = await chrome.storage.sync.get('authToken');
     e.preventDefault();

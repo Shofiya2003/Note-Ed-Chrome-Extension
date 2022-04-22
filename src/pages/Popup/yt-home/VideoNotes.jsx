@@ -10,6 +10,7 @@ export default function VideoNotes({
   activeVideo,
   setActiveNote,
   seteditorActive,
+  setisVideoNotesOpen,
 }) {
   const [allNotes, setAllNotes] = useState(null);
 
@@ -18,8 +19,7 @@ export default function VideoNotes({
   useState(async () => {
     const { authToken } = await chrome.storage.sync.get('authToken');
 
-    axios
-      .get(`${host}/api/v1/video/${activeVideo.video_id}`, {
+    axios.get(`${host}/api/v1/video/${activeVideo.video_id}`, {
         headers: {
           authorization: `Bearer ${authToken}`,
         },
@@ -29,10 +29,42 @@ export default function VideoNotes({
         setAllNotes(data.data.data);
       });
   }, []);
+
+  const deleteVideo = async () => {
+    console.log('deleting video');
+    const { authToken } = await chrome.storage.sync.get('authToken');
+    axios.post(`${host}/api/v1/video/delete`, 
+    {"video_id":activeVideo.video_id },
+    {
+        headers: {
+          authorization: `Bearer ${authToken}`,
+        },
+      })
+    // back to the main frame
+    // setisVideoNotesOpen(false);
+  };
+
   return (
     <div className="vidoe-notes">
       <h2 className="video-title">{activeVideo.video_name}</h2>
-      <h2>Your Notes</h2>
+      <div className="buttons">
+        <div className="childs">
+          <a
+            className="back-btn"
+            href="#"
+            onClick={() => {
+              setisVideoNotesOpen(false);
+            }}
+          >
+            Back
+          </a>
+          <a className="delete-btn" href="#" onClick={deleteVideo}>
+            Delete
+          </a>
+        </div>
+        <h2>Your Notes</h2>
+      </div>
+
       {allNotes ? (
         allNotes.map((singleNote) => {
           let singleNoteKey = Object.keys(singleNote)[0];
