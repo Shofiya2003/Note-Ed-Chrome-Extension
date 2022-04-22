@@ -41,7 +41,7 @@ export default function VideoNotes({
         },
       })
     // back to the main frame
-    // setisVideoNotesOpen(false);
+    window.location.reload();
   };
 
   return (
