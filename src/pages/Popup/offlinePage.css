@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #0091ad;
+  --primary-light-md: #3bc0d9;
+}
+
 .hero-name {
   font-family: cursive;
   background-color: #8a84fa;
@@ -14,7 +19,7 @@ button {
   cursor: pointer;
 }
 .refresh-btn {
-  background-color: #8a84fa;
+  background-color: var(--primary-light-md);
   color: black;
   padding: 7px;
   font-size: 1rem;

@@ -1,13 +1,23 @@
+:root {
+  --primary-color: #0091ad;
+  --primary-light-md: #3bc0d9;
+  --primary-color: #0091ad;
+  --primary-light-lg: #81daeb;
+  --primary-very-light: #bff5ff;
+}
+
 .codex-editor__redactor {
   padding-bottom: 0 !important;
 }
 #editorjs {
   font-size: 1.1rem;
   padding: 0 5px;
+  text-align: left;
+  padding: 0rem 1rem;
 }
 a.save-btn {
   font-size: 17px;
-  background-color: #e5e3ff;
+  background-color: var(--primary-very-light);
   color: black;
   font-weight: 600;
   padding: 3px 8px;
@@ -20,7 +30,7 @@ a.back-btn {
   font-size: 17px;
   color: black;
   font-weight: 600;
-  background-color: #e5e3ff;
+  background-color: var(--primary-very-light);
   padding: 3px 8px;
   text-decoration: none;
   border-radius: 3px;
@@ -35,13 +45,13 @@ a.back-btn {
   padding: 7px;
   margin-bottom: 7px;
   gap: 1rem;
-  background-color: #afaaf7;
+  background-color: var(--primary-light-md);
 }
 .back-btn:hover {
-  background-color: #8d87f6;
+  background-color: var(--primary-light-lg);
 }
 .save-btn:hover {
-  background-color: #8d87f6;
+  background-color: var(--primary-light-lg);
 }
 
 /* inline tools fix  */

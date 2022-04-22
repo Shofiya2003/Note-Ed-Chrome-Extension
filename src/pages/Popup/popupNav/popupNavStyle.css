@@ -1,5 +1,8 @@
 :root {
-  --primary-color: #8d87f6;
+  --primary-color: #0091ad;
+  --primary-light-md: #3bc0d9;
+  --primary-light-lg: #81daeb;
+  --primary-very-light: #bff5ff;
 }
 * {
   padding: 0;
@@ -46,5 +49,5 @@ h1 {
 .video-info {
   padding: 3px 10px;
   border-bottom: 2px solid var(--primary-color);
-  background-color: #e3e1ff;
+  background-color: var(--primary-very-light);
 }

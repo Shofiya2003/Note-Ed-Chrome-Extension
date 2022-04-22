@@ -2,7 +2,7 @@ import tools from "./commonTools"
 
 const config = {
   holder: 'editorjs',
-  autofocus: true,
+  // autofocus: false,
   placeholder: "write your notes here...",
   readOnly: false,
   tools: tools,

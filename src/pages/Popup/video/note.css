@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #8d87f6;
-  --primary-light: #a9a5f6;
+  --primary-color: #0091ad;
+  --primary-light-md: #3bc0d9;
 }
 
 .note {
@@ -20,7 +20,7 @@
   padding: 0 1em;
 }
 .note:hover {
-  background-color: #8d87f6;
+  background-color: var(--primary-light-md);
   width: 86%;
   padding: 0.8em;
 }
