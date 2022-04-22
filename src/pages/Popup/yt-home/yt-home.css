@@ -1,9 +1,15 @@
+:root {
+  --primary-color: #0091ad;
+  --primary-dark-md: #368a9b;
+  --primary-light-md: #7fcddf;
+  --primary-light: #cff2fa;
+}
 .title {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background: #bcbae4;
+  background: var(--primary-light);
 }
 .yt-logo {
   width: 50px;
@@ -11,11 +17,11 @@
 
 .single-video {
   cursor: pointer;
-  background-color: #b1adf7;
-  border: 2px solid #9b96f4;
+  background-color: var(--primary-dark-md);
+  border: 2px solid var(--primary-light-md);
   padding: 1em;
   margin: 10px;
-  color: black;
+  color: white;
   font-size: 1rem;
   font-weight: 600;
 }
